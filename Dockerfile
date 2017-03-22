@@ -17,6 +17,8 @@ RUN dpkg -i /tmp/oracle-instantclient11.2-basic_11.2.0.4.0-1_amd64.deb
 RUN dpkg -i /tmp/oracle-instantclient11.2-odbc_11.2.0.4.0-1_amd64.deb
 RUN dpkg -i /tmp/oracle-instantclient11.2-sqlplus_11.2.0.4.0-1_amd64.deb
 
+RUN mkdir -p /etc/oracle
+
 COPY ./etc/odbcinst.ini /etc
 COPY ./etc/odbc.ini /etc
 COPY ./etc/tnsnames.ora /etc/oracle
