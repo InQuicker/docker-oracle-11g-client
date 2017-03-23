@@ -8,8 +8,9 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
 RUN apt-get update && apt-get install -y \
-			unixodbc \
-			erlang-odbc
+      libaio1 \
+      unixodbc \
+      erlang-odbc
 
 COPY ./pkg /tmp
 
