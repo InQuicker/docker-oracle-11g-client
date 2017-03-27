@@ -1,10 +1,11 @@
 FROM debian:jessie
 
-RUN apt-get update && apt-get install -y \
-      locales \
-      libaio1 \
-      unixodbc \
-      erlang-odbc
+RUN DEBIAN_FRONTEND=noninteractive apt-get -qq update && \
+      apt-get -y --no-install-recommends install \
+        locales \
+        libaio1 \
+        unixodbc \
+        erlang-odbc
 
 RUN echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 RUN locale-gen en_US.UTF-8
