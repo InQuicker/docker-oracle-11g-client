@@ -23,7 +23,7 @@ ENV LANGUAGE="en_US.UTF-8" \
     LANG="en_US.UTF-8" \
     LC_ALL="en_US.UTF-8" \
     ORACLE_HOME="/usr/lib/oracle/11.2/client64" \
-    LD_LIBRARY_PATH="$LD_LIBRARY_PATH:$ORACLE_HOME/lib" \
+    LD_LIBRARY_PATH="/usr/lib/oracle/11.2/client64/lib" \
     TNS_ADMIN="/etc/oracle"
 
 CMD ["bash"]
