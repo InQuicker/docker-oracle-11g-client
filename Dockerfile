@@ -1,4 +1,4 @@
-FROM inquicker/docker-erlang-libsodium:0.2
+FROM inquicker/docker-erlang-libsodium:0.3
 
 COPY ./pkg /tmp
 
